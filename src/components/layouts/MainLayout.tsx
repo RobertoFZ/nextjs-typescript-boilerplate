@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import Head from './Head'
 
 // eslint-disable-next-line
 interface IMainLayout {
@@ -15,7 +16,12 @@ const MainLayout: React.FC<IMainLayout> = ({ children }) => {
 		document.documentElement.scrollTop = 0 // Chrome - Firefox
 	}
 
-	return <>{children}</>
+	return (
+		<div>
+			<Head />
+			{children}
+		</div>
+	)
 }
 
 export default MainLayout
